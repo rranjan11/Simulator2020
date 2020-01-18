@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 File:          trainingbot_agent.py
-Author:        Binit Shah 
+Author:        Binit Shah
 Last Modified: Binit on 12/11
 """
 
@@ -30,7 +30,7 @@ class TrainingBotAgent:
         The trainingbot URDF comes with its own dimensions and
         textures, collidables.
         """
-        self.robot = p.loadURDF(Utilities.gen_urdf_path("TrainingBot/urdf/TrainingBot.urdf", cwd), [-0.93, 0, 0.1], [0.5, 0.5, 0.5, 0.5], useFixedBase=False)
+        self.robot = p.loadURDF(Utilities.gen_urdf_path("TrainingBot/urdf/TrainingBot.urdf", cwd), [-0.9779, 0, 0.1], [0.5, 0.5, 0.5, 0.5], useFixedBase=False)
         p.setJointMotorControlArray(self.robot, self.caster_links, p.VELOCITY_CONTROL, targetVelocities=[100000, 100000], forces=[0, 0])
 
     def increaseLTargetVel(self):
